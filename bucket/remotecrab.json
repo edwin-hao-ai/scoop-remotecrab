@@ -1,0 +1,34 @@
+{
+    "version": "1.0.26",
+    "description": "Use an iPhone or iPad as the camera, microphone, trackpad and keyboard of your computer",
+    "homepage": "https://vgoapp.com/remotecrab/",
+    "license": "Proprietary",
+    "architecture": {
+        "64bit": {
+            "url": "https://vgoapp.com/downloads/RemoteCrab-1.0.26-setup.zip",
+            "hash": "e4903472edd703095d1f10c0786db538cbe4443d064d1312d03361bc0f8d4a44"
+        }
+    },
+    "shortcuts": [
+        [
+            "remotecrab.exe",
+            "RemoteCrab"
+        ]
+    ],
+    "checkver": {
+        "url": "https://vgoapp.com/downloads/windows/manifest.json",
+        "jsonpath": "$.version"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://vgoapp.com/downloads/RemoteCrab-$version-setup.zip"
+            }
+        }
+    },
+    "notes": [
+        "This installs the app itself, unprivileged: no UAC prompt, nothing in Program Files.",
+        "The virtual camera needs a driver, and the tray/shell integration comes from the MSI in the same archive. If you want those, run install.cmd as administrator from the installed directory.",
+        "Local network use is free. Remote access from outside your network is a subscription."
+    ]
+}
